@@ -25,7 +25,7 @@ emotions={
 # Load dataset
 def load_data(test_size=0.2):
     x,y=[],[]
-    for file in glob.glob("C:/Users/bhagyansh garg/Downloads/speech-emotion-recognition-ravdess-data/Actor_*/*.wav"):
+    for file in glob.glob("speech-emotion-recognition-ravdess-data/Actor_*/*.wav"):
         file_name=os.path.basename(file)
         emotion=emotions[file_name.split("-")[2]]
         feature=extract_feature(file, mfcc=True, chroma=True, mel=True)
